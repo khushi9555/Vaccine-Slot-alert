@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Covid-19</title>
+    <link rel="icon" type="png" href="title.png">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/2523d598bf.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!--calling js file-->
+    <script src="myscripts.js"></script>
+
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar navbar-style">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#micon">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#">
+                        <img class="logo" src="logo.jpg">
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="micon">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#"><i class="fas fa-home fa-lg"></i></i> Home</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#about"><i class="fas fa-info fa-lg"></i> About</a>
+                        </li>
+                        <li>
+                            <a href="#about"><i class="far fa-address-book fa-lg"></i> Contact us</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- Animation on top is here -->
+    <div class="container anmi-shadow">
+        <div class="col-sm-12 col-md-9">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_p2evb1ab.json" background="transparent" speed="1" style="width: 100%; height: 400px;" loop autoplay></lottie-player>
+
+        </div>
+
+        <!--Register button-->
+        <div class="col-sm-12 col-md-3" style="text-align: center;">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_ikyhq0rk.json" background="transparent" speed="1" style="width: 200px; height: 150px; padding-top: 50px; margin: 0 auto;" loop autoplay></lottie-player>
+
+            <a href="https://selfregistration.cowin.gov.in/" target="_blank">
+
+                <button class="reg">Register</button>
+            </a>
+        </div>
+
+    </div>
+
+    <!-- Input field -->
+    <div class="container">
+
+        <div class="input-box col-sm-12">
+
+            <h1 style="text-align: center; font-style:normal;">Check Your Nearest Vaccination Center And Slots Availability</h1>
+            <br>
+
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_Fl9YWn.json" background="transparent" speed="1" style="width: 200px; height: 200px; margin: 0 auto;" autoplay></lottie-player>
+
+            <form>
+                <input class="pincode" id="pincode" placeholder="Pincode" maxlength="6" minlength="6" type="text">
+                <br><br>
+                <input id="date" placeholder="Date" type="date">
+                <br><br><br>
+                <input class="btn-check" id="submit" type="submit" value="Search">
+            </form>
+        </div>
+
+        <!--data loading animation-->
+        <div class="col-sm-12" id="loading-anmi">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player src="https://assets3.lottiefiles.com/datafiles/bEYvzB8QfV3EM9a/data.json" background="transparent" speed="1" style="width: 100%; height: 200px; margin-top:-50px; margin-bottom:-100px;" loop autoplay></lottie-player>
+        </div>
+    </div>
+
+    <div class="container anmi-shadow" id="not_found">
+        <div class="col-sm-12">
+
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_r71cen62.json" background="transparent" speed="1" style="width: 100%; height: 300px;" loop autoplay></lottie-player>
+            <h1 style="text-align: center;">Sorry we did't find any related data </h1>
+        </div>
+    </div>
+
+    <!--if user not select date-->
+
+
+    <div class="container anmi-shadow" id="date_empty">
+        <div class="col-sm-12">
+
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_ytg7s6tx.json" background="transparent" speed="1" style="width: 100%; height: 300px;" loop autoplay></lottie-player>
+            <h1 style="text-align: center;">You must select date</h1>
+        </div>
+    </div>
+
+
+
+    <!--Data printing here-->
+    <div class="container anmi-shadow" id="tab">
+        <div class="col-sm-12 col-md-9">
+
+            <table class="table table-hover">
+                <thead class="th">
+                    <tr>
+                        <th>Address</th>
+                        <th>Vaccine</th>
+                        <th>Dose-1</th>
+                        <th>Dose-2</th>
+                    </tr>
+                </thead>
+                <tbody id="data">
+
+                </tbody>
+            </table>
+        </div>
+        <div class="col-sm-12 col-md-3">
+
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_vewnyqdu.json" background="transparent" speed="1" style="width: 300px; height: 300px; margin: 0 auto;" loop autoplay></lottie-player>
+
+        </div>
+    </div>
+    <br><br>
+    <div class="container">
+        <div class="col-sm-12">
+            <button id="btn" class="button" onclick="this.classList.toggle('button--loading')">
+            <span class="button--text">Set reminder</span>
+        </button>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <!--footer part vro-->
+    <footer class="footer">
+        <div class="container cont-foot">
+            <div class="row row-foot">
+                <div class="footer-col">
+                    <h4>About me</h4>
+                    <ul>
+                        <li>
+                            <a href="#about">Khushi Pandey</a>
+                            <a href="#about"> Web Developer</a>
+                            <a href="#about">khushipandey9555@gmail.com</a>
+                            <a href="#about">Chopan, Sonbhadra, UP</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col" id="about">
+                    <h4>Follow me</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/khushi9555" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/khushi_pandey_9555/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/khushi-pandey-54b21b20a/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://khushi9555.github.io/MyPersonalSite/" target="_blank"><i class="far fa-user"></i></a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
